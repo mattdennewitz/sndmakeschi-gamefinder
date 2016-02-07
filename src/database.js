@@ -10,7 +10,8 @@ export default {
       },
       tags: [
         'pricing:<$5',
-        'pricing:<$20', 'p:single-player', 'content:e', 'difficulty:casual', 'g:action', 'g:character'
+        'pricing:<$20',
+        'p:single-player', 'content:e', 'difficulty:casual', 'g:action', 'g:character'
       ]
     },
     {
@@ -21,8 +22,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
-        'p:single-player', 'content:t', 'difficulty:casual', 'g:character'
-
+        'p:single-player', 'content:t', 'difficulty:casual', 'g:puzzles', 'g:action', 'g:character'
       ]
     },
     {
@@ -32,8 +32,7 @@ export default {
       curator: null,
       tags: [
         'pricing:<$20',
-        'p:single-player', 'content:t', 'g:action'
-
+        'pricing:<$20', 'p:single-player', 'content:t', 'difficulty:casual', 'g:character'
       ]
     },
     {
@@ -44,8 +43,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
-        'p:single-player', 'content:e', 'difficulty:casual', 'g:puzzles', 'g:character'
-
+        'p:single-player', 'content:t', 'g:action'
       ]
     },
     {
@@ -56,7 +54,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
-        'p:single-player', 'content:e', 'difficulty:casual', 'g:character'
+        'p:single-player', 'content:e', 'difficulty:casual', 'g:puzzles', 'g:character'
       ]
     },
     {
@@ -67,6 +65,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:e', 'difficulty:casual', 'g:character'
       ]
     },
     {
@@ -78,7 +77,6 @@ export default {
         'pricing:<$20',
         'pricing:<$5',
         'p:single-player', 'content:t', 'difficulty:casual', 'g:action', 'g:puzzles', 'g:character'
-
       ]
     },
     {
@@ -227,7 +225,7 @@ export default {
         {
           text: 'Pretty time, like a PG-13 movie',
           fragment: 'kinda tame',
-          tags: ['content:e', 'content:e']
+          tags: ['content:e', 'content:t']
         },
         {
           text: 'Contains sex, violence, and even some rock and roll',

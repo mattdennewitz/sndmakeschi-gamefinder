@@ -13,6 +13,7 @@ const defaultState = {
   questions: [],
   currentQuestionId: 0,
   fragments: [],
+  answers: [],
 }
 
 export function surveyReducer(state=defaultState, action) {
@@ -32,14 +33,15 @@ export function surveyReducer(state=defaultState, action) {
 
     case F_QUESTION_ANSWERED:
       const refinementTags = action.answer.tags;
+      const allAnswers = state.answers.concat([action.answer]);
 
-      // create a list of games whose tags match the tags
-      // we're looking for
+      // create new game pool
+      var gamePool = (state.answers.length > 0 && state.gamesFound.length > 0)
+        ? state.gamesFound
+        : state.games
       var newGames;
-      var gamePool = (state.tags.length > 0 && state.gamesFound.length > 0)
-        ? state.gamesFound.slice()
-        : state.games.slice();
 
+      // update pool with games filtered to answer's tags
       if(refinementTags.length > 0) {
         newGames = gamePool.filter(game => {
           return _(game.tags).intersection(refinementTags).length > 0;
@@ -48,20 +50,56 @@ export function surveyReducer(state=defaultState, action) {
         newGames = state.gamesFound.slice()
       }
 
+      // get next question id
       const nextQuestionId = ++state.currentQuestionId;
 
-      var fragments = state.fragments.slice();
-      fragments.push(action.answer.fragment);
+      // add to fragments
+      const fragments = state.fragments.concat([action.answer.fragment]);
 
-      const newState = Object.assign({}, state, {
+      console.log(newGames);
+
+      return Object.assign({}, state, {
         fragments,
-        tags: refinementTags,
+        answers: allAnswers,
         gamesFound: newGames,
         currentQuestion: nextQuestionId,
         surveyComplete: nextQuestionId === state.questions.length,
-      });
+      })
 
-      return newState;
+      // const refinementTags = action.answer.tags;
+      // const allTags = state.tags.concat([refinementTags]);
+
+      // // create a list of games whose tags match the tags
+      // // we're looking for
+      // var newGames;
+      // var gamePool = (state.tags.length > 0 && state.gamesFound.length > 0)
+      //   ? state.gamesFound.slice()
+      //   : state.games.slice();
+
+      // if(refinementTags.length > 0) {
+      //   newGames = gamePool.filter(game => {
+      //     return _(game.tags).intersection(refinementTags).length > 0;
+      //   })
+      // } else {
+      //   newGames = state.gamesFound.slice()
+      // }
+
+      // const nextQuestionId = ++state.currentQuestionId;
+
+      // var fragments = state.fragments.slice();
+      // fragments.push(action.answer.fragment);
+
+      // console.log(allTags);
+
+      // const newState = Object.assign({}, state, {
+      //   fragments,
+      //   tags: allTags,
+      //   gamesFound: newGames,
+      //   currentQuestion: nextQuestionId,
+      //   surveyComplete: nextQuestionId === state.questions.length,
+      // });
+
+      // return newState;
 
     default:
       return state;

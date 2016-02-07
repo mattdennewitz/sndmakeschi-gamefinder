@@ -9,8 +9,8 @@ export default {
         playlist: 'Vin Scully\'s Fairytale Theater'
       },
       tags: [
-        'pricing:<$20',
         'pricing:<$5',
+        'pricing:<$20', 'p:single-player', 'content:e', 'difficulty:casual', 'g:action', 'g:character'
       ]
     },
     {
@@ -21,6 +21,8 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:t', 'difficulty:casual', 'g:character'
+
       ]
     },
     {
@@ -30,6 +32,8 @@ export default {
       curator: null,
       tags: [
         'pricing:<$20',
+        'p:single-player', 'content:t', 'g:action'
+
       ]
     },
     {
@@ -40,6 +44,8 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:e', 'difficulty:casual', 'g:puzzles', 'g:character'
+
       ]
     },
     {
@@ -50,6 +56,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:e', 'difficulty:casual', 'g:character'
       ]
     },
     {
@@ -70,6 +77,8 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:t', 'difficulty:casual', 'g:action', 'g:puzzles', 'g:character'
+
       ]
     },
     {
@@ -80,6 +89,8 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:t', 'difficulty:casual', 'g:puzzles', 'g:character'
+
       ]
     },
     {
@@ -90,6 +101,7 @@ export default {
       tags: [
         'pricing:<$20',
         'pricing:<$5',
+        'p:single-player', 'content:t', 'difficulty:casual', 'g:character', 'g:action'
       ]
     },
   ],
@@ -102,24 +114,22 @@ export default {
         {
           text: 'Save the planet',
           fragment: 'save the planet',
-          tags: ['aliens', 'adventure', 'space', 'fps', 'simulation',
-                 'heroic', 'sci-fi', 'action', 'exploration']
+          tags: ['g:action']
         },
         {
           text: 'Work on a puzzle',
           fragment: 'solve a puzzle',
-          tags: ['puzzles', 'relax', 'simulation']
+          tags: ['g:puzzles']
         },
         {
           text: 'Be someone new',
           fragment: 'be someone else for a while',
-          tags: ['fps', 'adventure', 'dating-sim', 'job-oriented', 'heroic',
-                 'sci-fi', 'action', 'exploration']
+          tags: ['g:character']
         },
         {
           text: 'Set the world on fire',
           fragment: 'set the world on fire',
-          tags: ['fps', 'adventure', 'relax', 'sci-fi', 'action']
+          tags: ['g:fire']
         }
       ]
     },
@@ -131,17 +141,17 @@ export default {
         {
           text: 'With other people?',
           fragment: 'with other people',
-          tags: ['multi-player', 'cooperative']
+          tags: ['p:multi-player', 'p:cooperative']
         },
         {
           text: 'Against other people?',
           fragment: 'by myself',
-          tags: ['multi-player']
+          tags: ['p:multi-player']
         },
         {
           text: 'On your own?',
           fragment: 'by my lonesome',
-          tags: ['single-player']
+          tags: ['p:single-player']
         },
         {
           text: 'Don\'t Care',
@@ -184,17 +194,17 @@ export default {
       answers: [
         {
           text: 'Easy',
-          fragment: 'something easy',
+          fragment: 'playing something easy',
           tags: ['difficulty:casual']
         },
         {
           text: 'Medium',
-          fragment: 'something moderately challenging',
+          fragment: 'kind of being challenging',
           tags: ['difficulty:medium']
         },
         {
           text: 'Hard',
-          fragment: 'something very challenging',
+          fragment: 'being very challenged',
           tags: ['difficulty:hard']
         },
         {
@@ -211,22 +221,22 @@ export default {
       answers: [
         {
           text: 'No violence, drug use, or bad language, please',
-          fragment: 'keep it clean',
+          fragment: 'let\'s keep it clean',
           tags: ['content:e']
         },
         {
           text: 'Pretty time, like a PG-13 movie',
-          fragment: 'tame',
+          fragment: 'kinda tame',
           tags: ['content:e', 'content:e']
         },
         {
           text: 'Contains sex, violence, and even some rock and roll',
-          fragment: 'risque',
+          fragment: 'I want to get risque',
           tags: ['content:t', 'content:m']
         },
         {
           text: 'I am a hedonist and want it all',
-          fragment: 'everything',
+          fragment: 'let\'s make it strange',
           tags: ['content:m', 'content:ao']
         }
       ]

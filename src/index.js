@@ -17,7 +17,8 @@ const store = configureStore({
     gamesFound: [],
     tags: [],
     fragments: [],
-    currentQuestionId: 0
+    currentQuestionId: 0,
+    answers: [],
   }
 });
 
@@ -33,7 +34,8 @@ class App extends React.Component {
   render() {
     const currentQuestion = this.props.questions[this.props.currentQuestionId];
 
-    const sentence = 'I want to ' + this.props.fragments.filter(f => !!f).join(' ');
+    var sentence = 'I want to ' + this.props.fragments.filter(f => !!f).slice(0, -1).join(', ');
+    sentence += ', and ' + this.props.fragments[this.props.fragments.length - 1];
     var displayElement;
 
     if(!this.props.surveyComplete) {

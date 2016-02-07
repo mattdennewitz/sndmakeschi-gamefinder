@@ -19,7 +19,7 @@ export default (props) => {
       <hr />
 
       {props.games.map((game, i) => {
-        return <div style={{maxWidth: 640}} key={'gamelist-' + i}><GameDetail game={game} /></div>
+        return <div className="mx-auto" style={{maxWidth: 640}} key={'gamelist-' + i}><GameDetail game={game} /></div>
       })}
     </div>
   )

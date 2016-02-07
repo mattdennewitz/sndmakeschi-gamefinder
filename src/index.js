@@ -38,7 +38,11 @@ class App extends React.Component {
     var displayElement;
 
     if(!this.props.surveyComplete) {
-      displayElement = <QuestionContainer question={currentQuestion} currentQuestionId={this.props.currentQuestionId} />;
+      if(this.props.gamesFound.length > 0 || this.props.answers.length === 0) {
+        displayElement = <QuestionContainer question={currentQuestion} currentQuestionId={this.props.currentQuestionId} />;
+      } else {
+        displayElement = <div>:(</div>;
+      }
     } else {
       displayElement = <GameList games={this.props.gamesFound} answers={this.props.answers} />;
     }
@@ -76,7 +80,12 @@ class App extends React.Component {
                   <button onClick={this.handleBail.bind(this)} className="blue btn btn-outline">
                     {this.props.gamesFound.length} game{this.props.gamesFound.length !== 1 && 's' || ''} found. Show me these games!
                   </button>
-                  || <span className="bold">No games found. Keep trying, or start over :|</span>
+                }
+
+                {
+                  this.props.answers.length > 0
+                  && this.props.gamesFound.length === 0
+                  && <span className="bold">No games found. Keep trying, or start over :|</span>
                 }
               </div>
 

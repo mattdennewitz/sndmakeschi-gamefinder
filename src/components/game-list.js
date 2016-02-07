@@ -1,5 +1,7 @@
 // game collection
 
+import _ from 'underscore';
+
 import GameDetail from './game-detail';
 import SentenceFilter from './sentence-filter';
 
@@ -7,6 +9,10 @@ export default (props) => {
   if(props.games.length === 0) {
     return 
   }
+
+  const games = _(props.games).sortBy(game => {
+    return -1 * game.score
+  })
 
   return (
     <div className="md-col md-col-8 mx-auto">

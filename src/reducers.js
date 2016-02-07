@@ -36,9 +36,18 @@ export function surveyReducer(state=defaultState, action) {
       const allAnswers = state.answers.concat([action.answer]);
 
       // create new game pool
-      var gamePool = (state.answers.length > 0 && state.gamesFound.length > 0)
-        ? state.gamesFound
-        : state.games
+      var gamePool;
+
+      if(state.answers.length > 0 && state.gamesFound.length > 0) {
+        gamePool = state.gamesFound.slice();
+      } else {
+        if(state.answers.length > 0) {
+          gamePool = state.gamesFound.slice();
+        } else {
+          gamePool = state.games.slice();
+        }
+      }
+
       var newGames;
 
       // update pool with games filtered to answer's tags

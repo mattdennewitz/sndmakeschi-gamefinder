@@ -5,7 +5,7 @@ export default {
       description: `Featuring epic, high-octane action moments set in the most beautiful hostile environments on earth, Rise of the Tomb Raider delivers a cinematic survival action adventure where you will join Lara Croft on her first tomb raiding expedition as she seeks to discover the secret of immortality.`,
       youtubeId: 'qiYiddjc6cU',
       tags: [
-        'price:expensive',
+        'price:$$$',
         'fps',
         'adventure',
         'action',
@@ -18,7 +18,7 @@ export default {
       description: `Crashlands is a story-driven crafting ARPG set in an outlandish world of hidden magic and high technology. Fight and tame alien beasts, craft resources into menacing weaponry, befriend the locals, and go toe-to-chin with a world-domineering maniac.`,
       youtubeId: 'q5M6qTEtsSQ',
       tags: [
-        'action', 'adventure', 'rpg', 'single-player', 'pricing:moderate',
+        'action', 'adventure', 'rpg', 'single-player', 'pricing:$$',
       ]
     },
     {
@@ -30,7 +30,7 @@ export default {
         'single-player',
         'adventure',
         'action',
-        'pricing:moderate',
+        'pricing:$$',
       ]
     }
   ],
@@ -67,16 +67,21 @@ export default {
 
     // question: multi-player or not?
     {
-      prompt: 'Do you want to play this with other people?',
+      prompt: 'Do you want to play...',
       answers: [
         {
-          text: 'Yes',
+          text: 'With other people?',
           fragment: 'with other people',
           tags: ['multi-player', 'cooperative']
         },
         {
-          text: 'No',
+          text: 'Against other people?',
           fragment: 'by myself',
+          tags: ['multi-player']
+        },
+        {
+          text: 'On your own?',
+          fragment: 'by my lonesome',
           tags: ['single-player']
         },
         {
@@ -89,22 +94,81 @@ export default {
 
     // question: pricing?
     {
-      prompt: 'Do you want to ball out on this game or keep it cheap?',
+      prompt: 'How much are you willing to spend on this game?',
       answers: [
         {
-          text: 'Yeah, who cares! Money is cheap.',
+          text: '$25 or more',
+          fragment: 'for $25 or more',
+          tags: ['price:$$$']
+        },
+        {
+          text: 'Up to $25',
+          fragment: 'up to $25',
+          tags: ['pricing:$', 'pricing:$$']
+        },
+        {
+          text: 'Keep it under $20',
+          fragment: 'while keeping it under $20',
+          tags: ['pricing:$']
+        },
+        {
+          text: 'Game free or die',
+          fragment: 'for free',
+          tags: ['pricing:free']
+        }
+      ]
+    },
+
+    // question: difficulty
+    {
+      prompt: 'What level of difficulty are you looking for?',
+      answers: [
+        {
+          text: 'Easy',
+          fragment: 'something easy',
+          tags: ['difficulty:easy']
+        },
+        {
+          text: 'Medium',
+          fragment: 'something moderately challenging',
+          tags: ['difficulty:medium']
+        },
+        {
+          text: 'Hard',
+          fragment: 'something very challenging',
+          tags: ['difficulty:hard']
+        },
+        {
+          text: 'Whatever',
           fragment: null,
           tags: []
+        }
+      ]
+    },
+
+    // question: content
+    {
+      prompt: 'What kind of content are you comfortable with?',
+      answers: [
+        {
+          text: 'No violence, drug use, or bad language, please',
+          fragment: 'keep it clean',
+          tags: ['content:clean']
         },
         {
-          text: 'Eh, not really',
-          fragment: null,
-          tags: ['pricing:moderate', 'pricing:cheap', 'pricing:free']
+          text: 'Pretty time, like a PG-13 movie',
+          fragment: 'tame',
+          tags: ['content:clean', 'content:tame']
         },
         {
-          text: 'What? No. No.',
-          fragment: 'on the cheap',
-          tags: ['pricing:cheap', 'pricing:free']
+          text: 'Contains sex, violence, and even some rock and roll',
+          fragment: 'risque',
+          tags: ['content:tame', 'content:risque']
+        },
+        {
+          text: 'I am a hedonist and want it all',
+          fragment: 'everything',
+          tags: ['content:risque', 'content:hedonist']
         }
       ]
     }

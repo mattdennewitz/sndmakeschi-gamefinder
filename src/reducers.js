@@ -1,7 +1,8 @@
 import _ from 'underscore';
 
 import {
-  F_QUESTION_ANSWERED
+  F_QUESTION_ANSWERED,
+  F_END_SURVEY
 } from './actions';
 
 const defaultState = {
@@ -14,8 +15,13 @@ const defaultState = {
 
 export function surveyReducer(state=defaultState, action) {
   switch(action.type) {
+    case F_END_SURVEY:
+      // end the survey
+      return Object.assign({}, state, {
+        surveyComplete: true
+      })
+
     case F_QUESTION_ANSWERED:
-      // const tags = _.uniq(state.tags.slice().concat(action.answer.tags));
       const refinementTags = action.answer.tags;
 
       // create a list of games whose tags match the tags

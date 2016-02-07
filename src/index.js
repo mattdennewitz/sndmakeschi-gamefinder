@@ -3,6 +3,7 @@ window.React = React;
 import ReactDOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
 
+import { endSurvey } from './actions';
 import QuestionContainer from './containers/qna';
 import GameList from './components/game-list';
 import Question from './components/question';
@@ -20,6 +21,10 @@ const store = configureStore({
 });
 
 class App extends React.Component {
+  handleBail() {
+    this.props.dispatch(endSurvey())
+  }
+
   render() {
     const currentQuestion = this.props.questions[this.props.currentQuestionId];
 
@@ -51,7 +56,7 @@ class App extends React.Component {
         <footer className="p2">
             <div className="center">
               {this.props.tags.length > 0 && this.props.games.length &&
-                <button className="white btn btn-primary">Show me these games!</button>}
+                <button onClick={this.handleBail.bind(this)} className="white btn btn-primary">Show me these games!</button>}
             </div>
         </footer>
       </div>

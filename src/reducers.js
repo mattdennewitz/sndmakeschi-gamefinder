@@ -66,41 +66,6 @@ export function surveyReducer(state=defaultState, action) {
         surveyComplete: nextQuestionId === state.questions.length,
       })
 
-      // const refinementTags = action.answer.tags;
-      // const allTags = state.tags.concat([refinementTags]);
-
-      // // create a list of games whose tags match the tags
-      // // we're looking for
-      // var newGames;
-      // var gamePool = (state.tags.length > 0 && state.gamesFound.length > 0)
-      //   ? state.gamesFound.slice()
-      //   : state.games.slice();
-
-      // if(refinementTags.length > 0) {
-      //   newGames = gamePool.filter(game => {
-      //     return _(game.tags).intersection(refinementTags).length > 0;
-      //   })
-      // } else {
-      //   newGames = state.gamesFound.slice()
-      // }
-
-      // const nextQuestionId = ++state.currentQuestionId;
-
-      // var fragments = state.fragments.slice();
-      // fragments.push(action.answer.fragment);
-
-      // console.log(allTags);
-
-      // const newState = Object.assign({}, state, {
-      //   fragments,
-      //   tags: allTags,
-      //   gamesFound: newGames,
-      //   currentQuestion: nextQuestionId,
-      //   surveyComplete: nextQuestionId === state.questions.length,
-      // });
-
-      // return newState;
-
     default:
       return state;
   }

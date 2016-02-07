@@ -5,10 +5,7 @@ export default {
       description: `Three Heroes make their way through dangers untold in a fairytale world, featuring physics-based puzzles, beautiful sights and online co-op.`,
       youtubeId: 'SkyR2lXBrqU',
       score: 5,
-      'curator': {
-        name: 'Vin Scully',
-        playlist: 'Vin Scully\'s Fairytale Theater'
-      },
+      curator: null,
       tags: [
         'pricing:<$5',
         'pricing:<$20',
@@ -32,7 +29,10 @@ export default {
       description: `Play with Life. Create the lives you've always wanted!`,
       youtubeId: 'p7BAUNzJvts',
       score: 4,
-      curator: null,
+      curator: {
+        name: 'Vin Diesel',
+        playlist: 'Vin\'s Favorites'
+      },
       tags: [
         'pricing:<$20',
         'pricing:<$20', 'p:single-player', 'content:t', 'difficulty:casual', 'g:character'
@@ -40,7 +40,7 @@ export default {
     },
     {
       name: 'Star Wars: Starfighter',
-      description: `Star Wars flyng simulator around the events of Star Wars: The Phantom Menace`,
+      description: `Star Wars flying simulator around the events of Star Wars: The Phantom Menace`,
       youtubeId: 't_MHrBuT1QE',
       score: 1,
       curator: null,
@@ -79,7 +79,10 @@ export default {
       description: `Experience the epic journey of Nuna and Fox as they search for the source of an eternal blizzard that threatens the survival of everything they have ever known.`,
       youtubeId: 'VnY21Fg5G1Y',
       score: 4,
-      curator: null,
+      curator: {
+        name: 'Anita Sarkeesian',
+        playlist: 'Get these now!'
+      },
       tags: [
         'pricing:<$20',
         'pricing:<$5',
@@ -91,12 +94,14 @@ export default {
       description: `Quico's best friend, Monster, is a huge beast with razor-sharp teeth, but that doesn’t scare Quico away from playing with him. That said, Monster does have a very dangerous problem: an addiction to poisonous frogs.`,
       youtubeId: 'qkrjby0lKRE',
       score: 4,
-      curator: null,
+      curator: {
+        name: 'Anita Sarkeesian',
+        playlist: 'Get these now!'
+      },
       tags: [
         'pricing:<$20',
         'pricing:<$5',
         'p:single-player', 'content:t', 'difficulty:casual', 'g:puzzles', 'g:character'
-
       ]
     },
     {
@@ -104,7 +109,10 @@ export default {
       description: `It's 1972 and a military coup has rocked Anchuria. You, Angela Burnes, are trapped in the metropolitan capital of San Bavón. Your paradise has turned into a warzone. You take up a job as a housekeeper. Every week, an hour before sunset, you clean the swanky bachelor pad of the wealthy Gabriel Ortega.`,
       youtubeId: 'xXxV-lhexic',
       score: 2,
-      curator: null,
+      curator: {
+        name: 'IndieGames.com',
+        playlist: 'Retro military up and comers'
+      },
       tags: [
         'pricing:<$20',
         'pricing:<$5',

@@ -119,6 +119,70 @@ export default {
         'p:single-player', 'content:t', 'difficulty:casual', 'g:character', 'g:action'
       ]
     },
+    {
+      name: 'The Deadly Tower of Monsters',
+      description: `Fire up your ray guns, crystal swords, and laser whips, and get ready for thrills and chills! With three incredible movie stars playing out decidedly B-level sci-fi exploits, Dick Starspeed, Scarlet Nova, and Robot will have you ready to jump off the side of the tower—right into adventure!`,
+      youtubeId: 'ATRsZZCX_vU',
+      score: 4,
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+        'g:action', 'content:t', 'g:action', 'p:single-player', 'p:multi-player'
+      ]
+    },
+    {
+      name: 'Fallout 4',
+      description: `Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.`,
+      youtubeId: 'GE2BkLqMef4',
+      score: 4,
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+        'content:m', 'difficulty:medium', 'difficulty:casual', 'g:action', 'g:fire', 'p:single-player'
+      ]
+    },
+    {
+      name: 'Dishonored',
+      description: `Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.`,
+      youtubeId: 'zcSc4uBc3nQ',
+      score: 5,
+      curator: null,
+      tags: [
+        'content:m', 'pricing:<$20', 'pricing:<$5', 'g:action', 'g:fire', 'p:single-player'
+      ]
+    },
+    {
+      name: 'Thief:Deadly Shadows',
+      description: `You are Garrett, the master thief. Rarely seen and never caught, Garrett is the best that ever was. Able to sneak past any guard, pick any lock, and break into the most ingeniously secured residences. Garrett steals from the wealthy and gives to himself, making his living in the dark and foreboding City.`,
+      youtubeId: 'vPzd8UcGs6E',
+      score: 4,
+      curator: null,
+      tags: [
+        'content:m', 'g:puzzles', 'pricing:<$20', 'pricing:<$5', 'g:action', 'g:fire', 'p:single-player'
+      ]
+    },
+    {
+      name: 'Oxenfree',
+      description: `Oxenfree is a supernatural thriller about a group of friends who unwittingly open a ghostly rift. You are Alex, and you’ve just brought your new stepbrother Jonas to an overnight island party gone horribly wrong.`,
+      youtubeId: 'NAhrOoNR4ng',
+      score: 4,
+      curator: null,
+      tags: [
+        'content:t', 'pricing:<$5', 'pricing:<$20', 'p:single-player', 'g:character', 'g:puzzle'
+      ]
+    },
+    {
+      name: 'The Bug Butcher',
+      description: `A fast paced action shooter inspired by the arcade classic Super Pang! Use a wide selection of weapons and powerups to tear through increasingly challenging levels.`,
+      youtubeId: 'ss0QIdxN8as',
+      score: 5,
+      curator: null,
+      tags: [
+        'pricing:<$5', 'pricing:<$20', 'p:single-player', 'g:action', 'g:fire'
+      ]
+    },
   ],
 
   questions: [

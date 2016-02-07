@@ -2,12 +2,14 @@ import _ from 'underscore';
 
 import {
   F_QUESTION_ANSWERED,
-  F_END_SURVEY
+  F_END_SURVEY,
+  F_FEELING_LUCKY
 } from './actions';
 
 const defaultState = {
   tags: [],
-  games: [],
+  games: [], // all games
+  gamesFound: [], // filtered games
   questions: [],
   currentQuestionId: 0,
   fragments: [],
@@ -21,19 +23,29 @@ export function surveyReducer(state=defaultState, action) {
         surveyComplete: true
       })
 
+    case F_FEELING_LUCKY:
+      return Object.assign({}, state, {
+        surveyComplete: true,
+        gamesFound: [_(state.games).sample()],
+        fragments: ['feel lucky']
+      })
+
     case F_QUESTION_ANSWERED:
       const refinementTags = action.answer.tags;
 
       // create a list of games whose tags match the tags
       // we're looking for
       var newGames;
+      var gamePool = (state.tags.length > 0 && state.gamesFound.length > 0)
+        ? state.gamesFound.slice()
+        : state.games.slice();
+
       if(refinementTags.length > 0) {
-        newGames = state.games.filter(game => {
-          console.log(game.tags, refinementTags);
+        newGames = gamePool.filter(game => {
           return _(game.tags).intersection(refinementTags).length > 0;
         })
       } else {
-        newGames = state.games.slice()
+        newGames = state.gamesFound.slice()
       }
 
       const nextQuestionId = ++state.currentQuestionId;
@@ -44,7 +56,7 @@ export function surveyReducer(state=defaultState, action) {
       const newState = Object.assign({}, state, {
         fragments,
         tags: refinementTags,
-        games: newGames,
+        gamesFound: newGames,
         currentQuestion: nextQuestionId,
         surveyComplete: nextQuestionId === state.questions.length,
       });

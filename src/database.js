@@ -223,7 +223,7 @@ export default {
           tags: ['content:e']
         },
         {
-          text: 'Pretty time, like a PG-13 movie',
+          text: 'Pretty tame, like a PG-13 movie',
           fragment: 'kinda tame',
           tags: ['content:e', 'content:t']
         },

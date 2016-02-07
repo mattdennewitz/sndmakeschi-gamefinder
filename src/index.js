@@ -49,11 +49,11 @@ class App extends React.Component {
 
     return (
       <div className="flex flex-column" style={{minHeight: '100vh'}}>
-        <header className="p2 clearfix">
-          <div className="left">
-            Gamefinder
+        <header className="p2 flex flex-row">
+          <div className="flex flex-auto flex-center">
+            <img style={{height: 24}} src="/src/img/logo.png" />
           </div>
-          <div className="right">
+          <div className="flex flex-center">
             <a href="/" className="btn btn-outline">Start a new search</a>
           </div>
         </header>

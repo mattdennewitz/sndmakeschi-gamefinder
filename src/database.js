@@ -47,7 +47,7 @@ export default {
                  'heroic', 'sci-fi', 'action', 'exploration']
         },
         {
-          text: 'Solve a puzzle',
+          text: 'Work on a puzzle',
           fragment: 'solve a puzzle',
           tags: ['puzzles', 'relax', 'simulation']
         },

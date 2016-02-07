@@ -1,38 +1,97 @@
 export default {
   games: [
     {
-      name: 'Rise of the Tomb Raider',
-      description: `Featuring epic, high-octane action moments set in the most beautiful hostile environments on earth, Rise of the Tomb Raider delivers a cinematic survival action adventure where you will join Lara Croft on her first tomb raiding expedition as she seeks to discover the secret of immortality.`,
-      youtubeId: 'qiYiddjc6cU',
+      name: 'Trine: 2 Complete Story',
+      description: `Three Heroes make their way through dangers untold in a fairytale world, featuring physics-based puzzles, beautiful sights and online co-op.`,
+      youtubeId: 'SkyR2lXBrqU',
+      'curator': {
+        name: 'Vin Scully',
+        playlist: 'Vin Scully\'s Fairytale Theater'
+      },
       tags: [
-        'price:$$$',
-        'fps',
-        'adventure',
-        'action',
-        'single-player',
-        'exploration'
+        'pricing:<$20',
+        'pricing:<$5',
       ]
     },
     {
-      name: 'Crashlands',
-      description: `Crashlands is a story-driven crafting ARPG set in an outlandish world of hidden magic and high technology. Fight and tame alien beasts, craft resources into menacing weaponry, befriend the locals, and go toe-to-chin with a world-domineering maniac.`,
-      youtubeId: 'q5M6qTEtsSQ',
+      name: 'Portal',
+      description: `Portal™ is a new single player game from Valve. Set in the mysterious Aperture Science Laboratories, Portal has been called one of the most innovative new games on the horizon and will offer gamers hours of unique gameplay.`,
+      youtubeId: 'cO_DIVuSyQ',
+      curator: null,
       tags: [
-        'action', 'adventure', 'rpg', 'single-player', 'pricing:$$',
+        'pricing:<$20',
+        'pricing:<$5',
       ]
     },
     {
-      name: 'Cobalt',
-      description: `Forget everything you've learned about combat. Cobalt's slo-mo mechanic lets you perform moves that other games can't comprehend. Discover the secrets of a distant colony in a cosmic campaign, take on challenges and rule the leaderboards, or face off against others in local and online multiplayer.`,
-      youtubeId: 'pK_VCmJlscY',
+      name: 'The Sims 3',
+      description: `Play with Life. Create the lives you've always wanted!`,
+      youtubeId: 'p7BAUNzJvts',
+      curator: null,
       tags: [
-        'multi-player',
-        'single-player',
-        'adventure',
-        'action',
-        'pricing:$$',
+        'pricing:<$20',
       ]
-    }
+    },
+    {
+      name: 'Star Wars: Starfighter',
+      description: `Star Wars flyng simulator around the events of Star Wars: The Phantom Menace`,
+      youtubeId: 't_MHrBuT1QE',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
+    {
+      name: 'Ticket to Ride',
+      description: `The official adaptation of Days of Wonder's best-selling train board game, Ticket to Ride takes less than one minute to learn but a lifetime to master.`,
+      youtubeId: 'KHaHRlGWgFM',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
+    {
+      name: 'Plants vs. Zombies GOTY Edition',
+      description: `Zombies are invading your home, and the only defense is your arsenal of plants! Armed with an alien nursery-worth of zombie-zapping plants like peashooters and cherry bombs, you'll need to think fast and plant faster to stop dozens of types of zombies dead in their tracks.`,
+      youtubeId: 'UzujEiKgnjI',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
+    {
+      name: 'Never Alone (Kisima Ingitchuna)',
+      description: `Experience the epic journey of Nuna and Fox as they search for the source of an eternal blizzard that threatens the survival of everything they have ever known.`,
+      youtubeId: 'VnY21Fg5G1Y',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
+    {
+      name: 'Papo & Yo',
+      description: `Quico's best friend, Monster, is a huge beast with razor-sharp teeth, but that doesn’t scare Quico away from playing with him. That said, Monster does have a very dangerous problem: an addiction to poisonous frogs.`,
+      youtubeId: 'qkrjby0lKRE',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
+    {
+      name: 'Sunset',
+      description: `It's 1972 and a military coup has rocked Anchuria. You, Angela Burnes, are trapped in the metropolitan capital of San Bavón. Your paradise has turned into a warzone. You take up a job as a housekeeper. Every week, an hour before sunset, you clean the swanky bachelor pad of the wealthy Gabriel Ortega.`,
+      youtubeId: 'xXxV-lhexic',
+      curator: null,
+      tags: [
+        'pricing:<$20',
+        'pricing:<$5',
+      ]
+    },
   ],
 
   questions: [
@@ -97,19 +156,19 @@ export default {
       prompt: 'How much are you willing to spend on this game?',
       answers: [
         {
-          text: '$25 or more',
-          fragment: 'for $25 or more',
-          tags: ['price:$$$']
-        },
-        {
-          text: 'Up to $25',
-          fragment: 'up to $25',
-          tags: ['pricing:$', 'pricing:$$']
+          text: 'More than $20',
+          fragment: 'for $20 or more',
+          tags: ['price:>$20']
         },
         {
           text: 'Keep it under $20',
-          fragment: 'while keeping it under $20',
-          tags: ['pricing:$']
+          fragment: 'for up to $20',
+          tags: ['pricing:<$20']
+        },
+        {
+          text: '$5 or less',
+          fragment: 'for $5 or less',
+          tags: ['pricing:<$5']
         },
         {
           text: 'Game free or die',
@@ -126,7 +185,7 @@ export default {
         {
           text: 'Easy',
           fragment: 'something easy',
-          tags: ['difficulty:easy']
+          tags: ['difficulty:casual']
         },
         {
           text: 'Medium',
@@ -153,22 +212,22 @@ export default {
         {
           text: 'No violence, drug use, or bad language, please',
           fragment: 'keep it clean',
-          tags: ['content:clean']
+          tags: ['content:e']
         },
         {
           text: 'Pretty time, like a PG-13 movie',
           fragment: 'tame',
-          tags: ['content:clean', 'content:tame']
+          tags: ['content:e', 'content:e']
         },
         {
           text: 'Contains sex, violence, and even some rock and roll',
           fragment: 'risque',
-          tags: ['content:tame', 'content:risque']
+          tags: ['content:t', 'content:m']
         },
         {
           text: 'I am a hedonist and want it all',
           fragment: 'everything',
-          tags: ['content:risque', 'content:hedonist']
+          tags: ['content:m', 'content:ao']
         }
       ]
     }
